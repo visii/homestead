@@ -10,6 +10,5 @@ void passTime();
 void checkCrop();
 void harvestCrop();
 void invalidChoice();
-void choiceHandler();
 
 #endif

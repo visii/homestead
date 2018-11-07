@@ -1,6 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include "ioStuff.h"
+#include "homestead.h"
 
 int printOptions()
 {
@@ -78,26 +79,3 @@ void invalidChoice()
 	choiceHandler();
 }
 
-
-void choiceHandler()
-{
-	int x{ printOptions() };
-	if (x == 1)
-	{
-		printPlantCrop();
-	}
-	else if (x == 2)
-	{
-		passTime();
-	}
-	else if (x == 3)
-	{
-		checkCrop();
-	}
-	else if (x == 4)
-	{
-		harvestCrop();
-	}
-	else
-		invalidChoice();
-}
