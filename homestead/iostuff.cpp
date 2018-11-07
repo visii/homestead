@@ -1,5 +1,7 @@
 #include "pch.h"
 #include <iostream>
+#include "ioStuff.h"
+
 int printOptions()
 {
 	std::cout << "What would you like to do\?\n"
@@ -11,7 +13,6 @@ int printOptions()
 	std::cin >> userChoice;
 	return userChoice;
 }
-void plantCrop(int cropType);
 
 void printPlantCrop()
 {
@@ -70,7 +71,6 @@ void harvestCrop()
 	std::cout << "You have chosen to harvest a crop";
 }
 
-void choiceHandler();
 
 void invalidChoice()
 {
