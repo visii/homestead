@@ -1,9 +1,12 @@
+//File that includes stuff that gets input and produces output for the user (eventually).
+//For now it includes a lot of functions that will be split or moved eventually.
+
 #include "pch.h"
 #include <iostream>
 #include "ioStuff.h"
 #include "homestead.h"
 
-
+//Printing the stuff for the main choiceHandler function.
 int printOptions()
 {
 	std::cout << "What would you like to do\?\n"
@@ -19,6 +22,7 @@ int printOptions()
 	return userChoice;
 }
 
+//Printing the stuff for the planting crop option.
 void printPlantCrop()
 {
 	std::cout << "You have chosen to plant a crop.\n"
@@ -32,12 +36,15 @@ void printPlantCrop()
 	plantCrop(cropType);
 }
 
+//In case the user inputs a wrong number. If the user inputs a character, everything breaks.
 void plantError()
 {
 	std::cout << "Invalid option, choose again\n";
 	printPlantCrop();
 }
 
+//Function that deal with what happens when the user plants a crop.
+//Shouldn't be here, but be in it's own cropstuff file.
 void plantCrop(int cropType)
 {
 	if (cropType == 1)
@@ -82,7 +89,8 @@ void plantCrop(int cropType)
 		
 }
 
-
+//Incomplete function that deals with what happens when the user ends the current turn.
+//Shouldn't be here, but in it's own endTurn file.
 void endTurn()
 {
 	changeActionPoints(addAP());
@@ -90,16 +98,22 @@ void endTurn()
 	choiceHandler();
 }
 
+//Function that deals with checking the current status of a crop (not implemented yet).
+//Shouldn't be here, but in the cropStuff file.
 void checkCrop()
 {
 	std::cout << "You have chosen to check a crop\n";
 }
 
+//Function that deals with havesting an already planted crop (not implemented yet).
+//Shouldn't be here, but in the cropStuff file.
 void harvestCrop()
 {
 	std::cout << "You have chosen to harvest a crop\n";
 }
 
+//Error in case the user inputs a wrong number.
+//If the user inputs a character instead, everything breaks.
 void invalidChoice()
 {
 	std::cout << "Invalid option, choose again\n";
