@@ -3,5 +3,6 @@
 #define HOMESTEAD_H
 
 void choiceHandler();
+void changePlayerMoney(int changeValue);
 
 #endif

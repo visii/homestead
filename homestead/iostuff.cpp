@@ -3,6 +3,7 @@
 #include "ioStuff.h"
 #include "homestead.h"
 
+
 int printOptions()
 {
 	std::cout << "What would you like to do\?\n"
@@ -38,22 +39,32 @@ void plantCrop(int cropType)
 {
 	if (cropType == 1)
 	{
-		std::cout << "You have planted crop1";
+		std::cout << "You have planted crop1\n";
+		changePlayerMoney(-50);
+		choiceHandler();
 	}
 	else if (cropType == 2)
 	{
-		std::cout << "You have planted crop2";
+		changePlayerMoney(-50);
+		std::cout << "You have planted crop2\n";
+		choiceHandler();
 	}
 	else if (cropType == 3)
 	{
-		std::cout << "You have planted crop3";
+		changePlayerMoney(-50);
+		std::cout << "You have planted crop3\n";
+		choiceHandler();
 	}
 	else if (cropType == 4)
 	{
-		std::cout << "You have planted crop4";
+		changePlayerMoney(-50);
+		std::cout << "You have planted crop4\n";
+		choiceHandler(); 
 	}
+	
 	else
 		plantError();
+		
 }
 
 
@@ -71,7 +82,6 @@ void harvestCrop()
 {
 	std::cout << "You have chosen to harvest a crop";
 }
-
 
 void invalidChoice()
 {
