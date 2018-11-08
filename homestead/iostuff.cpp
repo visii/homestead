@@ -85,7 +85,7 @@ void plantCrop(int cropType)
 
 void endTurn()
 {
-	changeActionPoints(+2);
+	changeActionPoints(addAP());
 	std::cout << "You have chosen to end your turn\n";
 	choiceHandler();
 }

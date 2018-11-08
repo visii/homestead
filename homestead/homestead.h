@@ -8,5 +8,6 @@ void changeCropGrowing(bool cropStatus);
 bool askCropGrowing();
 void changeActionPoints(int changeValue);
 void addPlayerXP(int addXP);
+int addAP();
 
 #endif
