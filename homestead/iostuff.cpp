@@ -45,10 +45,12 @@ void plantCrop(int cropType)
 		std::cout << "You have planted crop1\n";
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
+		changeActionPoints();
 		choiceHandler();
 	}
 	else if (cropType == 2)
 	{
+		changeActionPoints();
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop2\n";
@@ -56,6 +58,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 3)
 	{
+		changeActionPoints();
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop3\n";
@@ -63,6 +66,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 4)
 	{
+		changeActionPoints();
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop4\n";
