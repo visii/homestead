@@ -90,6 +90,7 @@ void plantCrop(int cropType)
 }
 
 //Incomplete function that deals with what happens when the user ends the current turn.
+//So far it just resets the users action based on user level.
 //Shouldn't be here, but in it's own endTurn file.
 void endTurn()
 {
@@ -98,14 +99,14 @@ void endTurn()
 	choiceHandler();
 }
 
-//Function that deals with checking the current status of a crop (not implemented yet).
+//Placeholder function that deals with checking the current status of a crop (not implemented yet).
 //Shouldn't be here, but in the cropStuff file.
 void checkCrop()
 {
 	std::cout << "You have chosen to check a crop\n";
 }
 
-//Function that deals with havesting an already planted crop (not implemented yet).
+//Placeholer function that deals with havesting an already planted crop (not implemented yet).
 //Shouldn't be here, but in the cropStuff file.
 void harvestCrop()
 {
