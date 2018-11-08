@@ -45,12 +45,12 @@ void plantCrop(int cropType)
 		std::cout << "You have planted crop1\n";
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
-		changeActionPoints();
+		changeActionPoints(-1);
 		choiceHandler();
 	}
 	else if (cropType == 2)
 	{
-		changeActionPoints();
+		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop2\n";
@@ -58,7 +58,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 3)
 	{
-		changeActionPoints();
+		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop3\n";
@@ -66,7 +66,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 4)
 	{
-		changeActionPoints();
+		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
 		std::cout << "You have planted crop4\n";
@@ -81,7 +81,9 @@ void plantCrop(int cropType)
 
 void endTurn()
 {
+	changeActionPoints(+2);
 	std::cout << "You have chosen to end your turn\n";
+	choiceHandler();
 }
 
 void checkCrop()
