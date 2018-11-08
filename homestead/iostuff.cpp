@@ -46,10 +46,12 @@ void plantCrop(int cropType)
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
 		changeActionPoints(-1);
+		addPlayerXP(1);
 		choiceHandler();
 	}
 	else if (cropType == 2)
 	{
+		addPlayerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
@@ -58,6 +60,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 3)
 	{
+		addPlayerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
@@ -66,6 +69,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 4)
 	{
+		addPlayerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);

@@ -7,5 +7,6 @@ void changePlayerMoney(int changeValue);
 void changeCropGrowing(bool cropStatus);
 bool askCropGrowing();
 void changeActionPoints(int changeValue);
+void addPlayerXP(int addXP);
 
 #endif
