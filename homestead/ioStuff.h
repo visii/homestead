@@ -6,7 +6,7 @@ int printOptions();
 void printPlantCrop();
 void plantError();
 void plantCrop(int cropType);
-void passTime();
+void endTurn();
 void checkCrop();
 void harvestCrop();
 void invalidChoice();

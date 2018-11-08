@@ -4,5 +4,7 @@
 
 void choiceHandler();
 void changePlayerMoney(int changeValue);
+void changeCropGrowing(bool cropStatus);
+bool askCropGrowing();
 
 #endif
