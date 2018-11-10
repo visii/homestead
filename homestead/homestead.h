@@ -3,10 +3,10 @@
 #define HOMESTEAD_H
 
 void choiceHandler();
-void changePlayerMoney(int changeValue);
+int changePlayerMoney(int changeValue);
 void changeCropGrowing(bool cropStatus);
 bool askCropGrowing();
-void changeActionPoints(int changeValue);
+int changeActionPoints(int changeValue);
 void addPlayerXP(int addXP);
 int addAP();
 
