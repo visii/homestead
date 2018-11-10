@@ -10,5 +10,7 @@ void endTurn();
 void checkCrop();
 void harvestCrop();
 void invalidChoice();
+void printStatus();
+void levelUpMessage();
 
 #endif

@@ -6,6 +6,23 @@
 #include "ioStuff.h"
 #include "homestead.h"
 #include "cropstuff.h"
+#include "userlevelstuff.h"
+
+void levelUpMessage()
+{
+	std::cout << "Congratulations!\n"
+			  << "You have levelled up!\n"
+			  << "You are now level " << playerLevel(0) << "\n";
+}
+
+//Prints the current status of the player
+void printStatus()
+{
+	std::cout << "You have " << changePlayerMoney(0) << " moneys"
+		<< " and " << changeActionPoints(0) << " action points.\n"
+		<< "You are level " << playerLevel(0)
+		<< " and you have " << playerXP(0) << " experience.\n";
+}
 
 //Printing the stuff for the main choiceHandler function.
 int printOptions()
@@ -54,12 +71,12 @@ void plantCrop(int cropType)
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
 		changeActionPoints(-1);
-		addPlayerXP(1);
+		playerXP(1);
 		choiceHandler();
 	}
 	else if (cropType == 2)
 	{
-		addPlayerXP(1);
+		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
@@ -68,7 +85,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 3)
 	{
-		addPlayerXP(1);
+		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
@@ -77,7 +94,7 @@ void plantCrop(int cropType)
 	}
 	else if (cropType == 4)
 	{
-		addPlayerXP(1);
+		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
 		changeCropGrowing(true);
@@ -95,7 +112,7 @@ void plantCrop(int cropType)
 //Shouldn't be here, but in it's own endTurn file.
 void endTurn()
 {
-	changeActionPoints(addAP());
+	changeActionPoints(addAP(0));
 	std::cout << "You have chosen to end your turn\n";
 	choiceHandler();
 }

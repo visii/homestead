@@ -4,10 +4,7 @@
 
 void choiceHandler();
 int changePlayerMoney(int changeValue);
-void changeCropGrowing(bool cropStatus);
-bool askCropGrowing();
 int changeActionPoints(int changeValue);
-void addPlayerXP(int addXP);
-int addAP();
+//void addPlayerXP(int addXP);
 
 #endif
