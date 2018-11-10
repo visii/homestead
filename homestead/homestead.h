@@ -5,6 +5,5 @@
 void choiceHandler();
 int changePlayerMoney(int changeValue);
 int changeActionPoints(int changeValue);
-//void addPlayerXP(int addXP);
 
 #endif
