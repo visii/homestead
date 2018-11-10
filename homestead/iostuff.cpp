@@ -5,6 +5,7 @@
 #include <iostream>
 #include "ioStuff.h"
 #include "homestead.h"
+#include "cropstuff.h"
 
 //Printing the stuff for the main choiceHandler function.
 int printOptions()
@@ -12,7 +13,7 @@ int printOptions()
 	std::cout << "What would you like to do\?\n"
 		<< "1) End turn\n"
 		<< "2) Plant a crop\n";
-		if (askCropGrowing())
+		if (requestCropStatus())
 		{
 		std::cout   << "3) Check crop status\n"
 					<< "4) Harvest crop\n";

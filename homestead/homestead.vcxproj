@@ -151,11 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cropstuff.h" />
     <ClInclude Include="homestead.h" />
     <ClInclude Include="ioStuff.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cropstuff.cpp" />
     <ClCompile Include="homestead.cpp" />
     <ClCompile Include="iostuff.cpp" />
     <ClCompile Include="pch.cpp">
