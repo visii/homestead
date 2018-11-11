@@ -76,7 +76,7 @@ void plantError()
 	std::cout << "Invalid option, choose again\n";
 	std::cin.clear();
 	std::cin.ignore(INT_MAX, '\n');
-	printPlantCrop();
+	plantCrop();
 }
 
 void plantCropMessage(int cropType)
