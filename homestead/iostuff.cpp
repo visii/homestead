@@ -125,6 +125,7 @@ void endTurn()
 void checkCrop()
 {
 	std::cout << "You have chosen to check a crop\n";
+	choiceHandler();
 }
 
 //Placeholer function that deals with havesting an already planted crop (not implemented yet).
@@ -132,6 +133,7 @@ void checkCrop()
 void harvestCrop()
 {
 	std::cout << "You have chosen to harvest a crop\n";
+	choiceHandler();
 }
 
 //Error in case the user inputs a wrong number.
@@ -139,6 +141,8 @@ void harvestCrop()
 void invalidChoice()
 {
 	std::cout << "Invalid option, choose again\n";
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	choiceHandler();
 }
 

@@ -7,3 +7,4 @@ int changePlayerMoney(int changeValue)
 	playerMoney = playerMoney + changeValue;
 	return playerMoney;
 }
+
