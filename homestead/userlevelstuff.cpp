@@ -17,19 +17,21 @@ int addAP(int moreAP)
 	return addAPonLevelUp;
 }
 
-//Keeps track of the XP of the player. Whenever XP is dividable by a scaling number, it levels up the player and resets the XP.
-//Possible issues with this are that giving a player uneven amounts of XP will not levelup the player.
+// Keeps track of the XP of the player. Whenever XP is equal or more than the amount of XP needed to level,
+// it levels up the player. It saves any excess XP for the next level. The amount of XP needed to reach
+// the next level is automatically increased as it the amount of AP the player gets back when they end
+// their turn.
 int playerXP(int addXP)
 {
 	static int levelUpTreshhold{ 2 };
 	static int playerXP{ 0 };
 	playerXP = playerXP + addXP;
-	if ((playerXP % levelUpTreshhold == 0) && (playerXP !=0))
+	if ((playerXP >= levelUpTreshhold) && (playerXP !=0))
 	{
+		playerXP = playerXP - levelUpTreshhold;
 		levelUpTreshhold++;
 		playerLevel(1);
 		addAP(1);
-		playerXP = 0;
 		levelUpMessage();
 	}
 	return playerXP;
