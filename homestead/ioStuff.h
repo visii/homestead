@@ -3,16 +3,16 @@
 #define IOSTUFF_H
 
 int printOptions();
-void printPlantCrop();
+int printPlantCrop();
 void plantError();
-void plantCrop(int cropType);
 void endTurn();
-void checkCrop();
-void harvestCrop();
 void invalidChoice();
 void printStatus();
 void levelUpMessage(); 
 int printFieldOptions();
 void weedMessage();
+void harvestCropMessage();
+void checkCropMessage();
+void plantCropMessage(int cropType);
 
 #endif

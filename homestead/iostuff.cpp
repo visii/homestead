@@ -57,7 +57,7 @@ int printFieldOptions()
 }
 
 //Printing the stuff for the planting crop option.
-void printPlantCrop()
+int printPlantCrop()
 {
 	std::cout << "You have chosen to plant a crop.\n"
 			  << "Select the type of crop you would like to plant\n"
@@ -67,61 +67,23 @@ void printPlantCrop()
 			  << "4) Crop 4\n";
 	int cropType{};
 	std::cin >> cropType;
-	plantCrop(cropType);
+	return cropType;
 }
 
 //In case the user inputs a wrong number. If the user inputs a character, everything breaks.
 void plantError()
 {
 	std::cout << "Invalid option, choose again\n";
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
 	printPlantCrop();
 }
 
-//Function that deal with what happens when the user plants a crop.
-//Shouldn't be here, but be in it's own cropstuff file.
-void plantCrop(int cropType)
+void plantCropMessage(int cropType)
 {
-	if (cropType == 1)
-	{
-		std::cout << "You have planted crop1\n";
-		changeCropGrowing(true);
-		changePlayerMoney(-50);
-		changeActionPoints(-1);
-		playerXP(1);
-		choiceHandler();
-	}
-	else if (cropType == 2)
-	{
-		std::cout << "You have planted crop2\n";
-		playerXP(1);
-		changeActionPoints(-1);
-		changePlayerMoney(-50);
-		changeCropGrowing(true);
-		choiceHandler();
-	}
-	else if (cropType == 3)
-	{
-		std::cout << "You have planted crop3\n";
-		playerXP(1);
-		changeActionPoints(-1);
-		changePlayerMoney(-50);
-		changeCropGrowing(true);
-		choiceHandler();
-	}
-	else if (cropType == 4)
-	{
-		std::cout << "You have planted crop4\n";
-		playerXP(1);
-		changeActionPoints(-1);
-		changePlayerMoney(-50);
-		changeCropGrowing(true);
-		choiceHandler(); 
-	}
-	
-	else
-		plantError();
-		
+	std::cout << "You have planted crop " << cropType << "\n";
 }
+
 
 //Incomplete function that deals with what happens when the user ends the current turn.
 //So far it just resets the users action based on user level.
@@ -135,20 +97,15 @@ void endTurn()
 	choiceHandler();
 }
 
-//Placeholder function that deals with checking the current status of a crop (not implemented yet).
-//Shouldn't be here, but in the cropStuff file.
-void checkCrop()
+void checkCropMessage()
 {
 	std::cout << "You have chosen to check a crop\n";
-	choiceHandler();
 }
 
-//Placeholer function that deals with havesting an already planted crop (not implemented yet).
-//Shouldn't be here, but in the cropStuff file.
-void harvestCrop()
+
+void harvestCropMessage()
 {
 	std::cout << "You have chosen to harvest a crop\n";
-	choiceHandler();
 }
 
 //Error in case the user inputs a wrong number.
