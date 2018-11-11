@@ -36,35 +36,6 @@ int printOptions()
 	return userChoice;
 }
 
-int printFieldOptions()
-{
-	std::cout << "You are at your fields. What would you like to do\?\n"
-			  << "1) Plant a crop\n"
-			  << "2) Weed a field\n";
-		if (isCropGrowing())
-		{
-			std::cout << "3) Check crop status\n"
-					  << "4) Harvest crop\n";
-		}
-	int userChoice{};
-	std::cin >> userChoice;
-	return userChoice;
-}
-
-//Printing the stuff for the planting crop option.
-int printPlantCrop()
-{
-	std::cout << "You have chosen to plant a crop.\n"
-			  << "Select the type of crop you would like to plant\n"
-			  << "1) Crop 1\n"
-			  << "2) Crop 2\n"
-			  << "3) Crop 3\n"
-			  << "4) Crop 4\n";
-	int cropType{};
-	std::cin >> cropType;
-	return cropType;
-}
-
 //In case the user inputs a wrong number. If the user inputs a character, everything breaks.
 void plantError()
 {

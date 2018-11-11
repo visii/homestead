@@ -45,7 +45,7 @@ void checkCrop()
 // Main function that deals with the option a user chooses if he visit the fields.
 void fieldChoiceHandler()
 {
-	int x{ printFieldOptions() };
+	int x{ cro::printFieldOptions() };
 	if (x == 1)
 	{
 		plantCrop();
@@ -77,7 +77,7 @@ void weedField()
 // crop and adds the appropiate amount of XP.
 void plantCrop()
 {
-	int cropType{ printPlantCrop() };
+	int cropType{ cro::printPlantCrop() };
 	if (cropType == 1)
 	{
 		cro::plantCropMessage(1);
