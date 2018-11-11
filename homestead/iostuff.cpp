@@ -36,11 +36,6 @@ int printOptions()
 	return userChoice;
 }
 
-void weedMessage()
-{
-	std::cout << "You have chosen to weed a field\n";
-}
-
 int printFieldOptions()
 {
 	std::cout << "You are at your fields. What would you like to do\?\n"
@@ -79,12 +74,6 @@ void plantError()
 	plantCrop();
 }
 
-void plantCropMessage(int cropType)
-{
-	std::cout << "You have planted crop " << cropType << "\n";
-}
-
-
 //Incomplete function that deals with what happens when the user ends the current turn.
 //So far it just resets the users action based on user level.
 //Shouldn't be here, but in it's own endTurn file.
@@ -97,16 +86,6 @@ void endTurn()
 	choiceHandler();
 }
 
-void checkCropMessage()
-{
-	std::cout << "You have chosen to check a crop\n";
-}
-
-
-void harvestCropMessage()
-{
-	std::cout << "You have chosen to harvest a crop\n";
-}
 
 //Error in case the user inputs a wrong number.
 //If the user inputs a character instead, everything breaks.

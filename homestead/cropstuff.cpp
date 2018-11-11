@@ -4,6 +4,7 @@
 #include "userlevelstuff.h"
 #include "inventory.h"
 #include "cropstuff.h"
+#include "cro.h"
 
 // This global variable can only be changed by 1 function, changeCropGrowing. 
 // Other functions needing it's status can do so with the isCropGrowing bool.
@@ -29,14 +30,14 @@ bool isCropGrowing()
 //Shouldn't be here, but in the cropStuff file.
 void harvestCrop()
 {
-	harvestCropMessage();
+	cro::harvestCropMessage();
 	choiceHandler();
 }
 
 //Placeholder function that deals with checking the current status of a crop (not implemented yet).
 void checkCrop()
 {
-	checkCropMessage();
+	cro::checkCropMessage();
 	choiceHandler();
 }
 
@@ -67,7 +68,7 @@ void fieldChoiceHandler()
 // Placeholder function that deals with weeding a field (not implemented yet).
 void weedField()
 {
-	weedMessage();
+	cro::weedMessage();
 	choiceHandler();
 }
 
@@ -79,7 +80,7 @@ void plantCrop()
 	int cropType{ printPlantCrop() };
 	if (cropType == 1)
 	{
-		plantCropMessage(1);
+		cro::plantCropMessage(1);
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
 		changeActionPoints(-1);
@@ -88,7 +89,7 @@ void plantCrop()
 	}
 	else if (cropType == 2)
 	{
-		plantCropMessage(2);
+		cro::plantCropMessage(2);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -97,7 +98,7 @@ void plantCrop()
 	}
 	else if (cropType == 3)
 	{
-		plantCropMessage(3);
+		cro::plantCropMessage(3);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -106,7 +107,7 @@ void plantCrop()
 	}
 	else if (cropType == 4)
 	{
-		plantCropMessage(4);
+		cro::plantCropMessage(4);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
