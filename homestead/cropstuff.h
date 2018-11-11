@@ -3,6 +3,6 @@
 #define CROPSTUFF_H
 
 void changeCropGrowing(bool cropStatus);
-bool requestCropStatus();
+bool isCropGrowing();
 
 #endif

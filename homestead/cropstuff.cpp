@@ -7,7 +7,7 @@ void changeCropGrowing(bool cropStatus)
 	cropGrowing = cropStatus;
 }
 
-bool requestCropStatus()
+bool isCropGrowing()
 {
 	return cropGrowing;
 }
