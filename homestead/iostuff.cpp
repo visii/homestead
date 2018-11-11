@@ -7,6 +7,7 @@
 #include "homestead.h"
 #include "cropstuff.h"
 #include "userlevelstuff.h"
+#include "inventory.h"
 
 void levelUpMessage()
 {
