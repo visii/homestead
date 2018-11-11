@@ -4,5 +4,6 @@
 
 void changeCropGrowing(bool cropStatus);
 bool isCropGrowing();
+void fieldChoiceHandler();
 
 #endif

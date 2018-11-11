@@ -11,6 +11,8 @@ void checkCrop();
 void harvestCrop();
 void invalidChoice();
 void printStatus();
-void levelUpMessage();
+void levelUpMessage(); 
+int printFieldOptions();
+void weedMessage();
 
 #endif

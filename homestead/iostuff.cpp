@@ -29,12 +29,27 @@ void printStatus()
 int printOptions()
 {
 	std::cout << "What would you like to do\?\n"
-		<< "1) End turn\n"
-		<< "2) Plant a crop\n";
+			  << "1) End turn\n"
+			  << "2) Go to your fields\n";
+	int userChoice{};
+	std::cin >> userChoice;
+	return userChoice;
+}
+
+void weedMessage()
+{
+	std::cout << "You have chosen to weed a field\n";
+}
+
+int printFieldOptions()
+{
+	std::cout << "You are at your fields. What would you like to do\?\n"
+			  << "1) Plant a crop\n"
+			  << "2) Weed a field\n";
 		if (isCropGrowing())
 		{
-		std::cout   << "3) Check crop status\n"
-					<< "4) Harvest crop\n";
+			std::cout << "3) Check crop status\n"
+					  << "4) Harvest crop\n";
 		}
 	int userChoice{};
 	std::cin >> userChoice;
