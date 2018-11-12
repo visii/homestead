@@ -4,5 +4,6 @@
 
 void choiceHandler();
 int changeActionPoints(int changeValue);
+void welcomeMenu();
 
 #endif
