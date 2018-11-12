@@ -8,6 +8,7 @@
 #include "cropstuff.h"
 #include "userlevelstuff.h"
 #include "inventory.h"
+#include "townstuff.h"
 
 void levelUpMessage()
 {
@@ -30,11 +31,19 @@ void printInventory()
 	std::cout << "Your inventory is emtpy\n";
 }
 
-void townOptions()
+void genStoreMsg()
 {
-	int x{ printTownOptions() };
-	choiceHandler();
+	std::cout << "You are in the general store\n";
 }
+void toolStoreMsg()
+{
+	std::cout << "You are in the tool store\n";
+}
+void lsStoreMsg()
+{
+	std::cout << "You are at the livestock market\n";
+}
+
 
 int printTownOptions()
 {
@@ -67,6 +76,14 @@ void plantError()
 	std::cin.clear();
 	std::cin.ignore(INT_MAX, '\n');
 	plantCrop();
+}
+
+void townError()
+{
+	std::cout << "Invalid option, choose again\n";
+	std::cin.clear();
+	std::cin.ignore(INT_MAX, '\n');
+	townOptions();
 }
 
 //Incomplete function that deals with what happens when the user ends the current turn.

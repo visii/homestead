@@ -11,5 +11,9 @@ void levelUpMessage();
 void printInventory();
 void townOptions();
 int printTownOptions();
+void townError();
+void genStoreMsg();
+void toolStoreMsg();
+void lsStoreMsg();
 
 #endif
