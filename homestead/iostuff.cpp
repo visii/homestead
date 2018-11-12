@@ -9,11 +9,12 @@
 #include "userlevelstuff.h"
 #include "inventory.h"
 #include "townstuff.h"
+#include "welcome.h"
 
 void levelUpMessage()
 {
-	std::cout << "Congratulations!\n"
-			  << "You have levelled up!\n"
+	std::cout << "Congratulations " << returnUserName() 
+			  << " you have levelled up!\n"
 			  << "You are now level " << playerLevel(0) << "\n";
 }
 
@@ -59,7 +60,8 @@ int printTownOptions()
 //Printing the stuff for the main choiceHandler function.
 int printOptions()
 {
-	std::cout << "What would you like to do\?\n"
+	std::cout << "You are at the " << returnFarmName() << "\n"
+			  << "What would you like to do\?\n"
 			  << "1) End turn\n"
 			  << "2) Go to your fields\n"
 			  << "3) Check your inventory\n"

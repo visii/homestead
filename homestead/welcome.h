@@ -4,9 +4,9 @@
 
 #include <string>
 
-std::string askUserName();
 std::string returnUserName();
 void welcomeMsgName();
 void welcomeMsgFarm();
+std::string returnFarmName();
 
 #endif

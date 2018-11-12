@@ -16,6 +16,20 @@ std::string returnUserName()
 	return userName;
 }
 
+std::string askFarmName()
+{
+	std::cout << "Please enter the name of your farm ";
+	std::string farmName{};
+	std::getline(std::cin, farmName);
+	return farmName;
+}
+
+std::string returnFarmName()
+{
+	static std::string farmName{ askFarmName() };
+	return farmName;
+}
+
 void welcomeMsgName()
 {
 	std::cout << "Welcome to homestead!\n";
@@ -25,5 +39,6 @@ void welcomeMsgName()
 
 void welcomeMsgFarm()
 {
-
+	std::string userName{ returnFarmName() };
+	std::cout << "Your farm is now called " << userName << "!\n";
 }
