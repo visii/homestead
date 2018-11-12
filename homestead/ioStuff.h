@@ -8,5 +8,8 @@ void endTurn();
 void invalidChoice();
 void printStatus();
 void levelUpMessage(); 
+void printInventory();
+void townOptions();
+int printTownOptions();
 
 #endif

@@ -3,5 +3,6 @@
 #define INVENTORY_H
 
 int changePlayerMoney(int changeValue);
+void checkInventory();
 
 #endif

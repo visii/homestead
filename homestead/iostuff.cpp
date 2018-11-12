@@ -25,12 +25,36 @@ void printStatus()
 		<< " and you have " << playerXP(0) << " experience.\n";
 }
 
+void printInventory()
+{
+	std::cout << "Your inventory is emtpy\n";
+}
+
+void townOptions()
+{
+	int x{ printTownOptions() };
+	choiceHandler();
+}
+
+int printTownOptions()
+{
+	std::cout << "You arrived in town. What would do you like to do\?\n"
+			  << "1) Visit the livestock market\n"
+			  << "2) Go to the general store\n"
+			  << "3) Go to the tool store\n";
+	int userChoice{};
+	std::cin >> userChoice;
+	return userChoice;
+}
+
 //Printing the stuff for the main choiceHandler function.
 int printOptions()
 {
 	std::cout << "What would you like to do\?\n"
 			  << "1) End turn\n"
-			  << "2) Go to your fields\n";
+			  << "2) Go to your fields\n"
+			  << "3) Check your inventory\n"
+			  << "4) Go to town (1 ap)\n";
 	int userChoice{};
 	std::cin >> userChoice;
 	return userChoice;
