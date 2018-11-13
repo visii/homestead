@@ -11,6 +11,8 @@ int changePlayerMoney(int changeValue)
 	return playerMoney;
 }
 
+
+// Placeholder function for future inventory stuff.
 void checkInventory()
 {
 	printInventory();

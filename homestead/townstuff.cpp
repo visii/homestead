@@ -3,6 +3,9 @@
 #include "townstuff.h"
 #include "homestead.h"
 
+
+// Main function that deals with what happens when the user
+// chooses to visit town.
 void townOptions()
 {
 	int x{ printTownOptions() };
