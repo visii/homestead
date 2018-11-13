@@ -10,6 +10,8 @@ std::string askUserName()
 	return userName;
 }
 
+// Asks for, and then permanently stores, the name of the user.
+// Return the username when called.
 std::string returnUserName()
 {
 	static std::string userName{ askUserName() };
@@ -24,6 +26,8 @@ std::string askFarmName()
 	return farmName;
 }
 
+// Asks for, and then permanently stores, the name of the farm.
+// Return the farmname when called.
 std::string returnFarmName()
 {
 	static std::string farmName{ askFarmName() };
@@ -39,6 +43,6 @@ void welcomeMsgName()
 
 void welcomeMsgFarm()
 {
-	std::string userName{ returnFarmName() };
-	std::cout << "Your farm is now called " << userName << "!\n";
+	std::string farmName{ returnFarmName() };
+	std::cout << "Your farm is now called " << farmName << "!\n";
 }
