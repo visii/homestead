@@ -58,7 +58,7 @@ namespace cro
 		if (isCropGrowing())
 		{
 			std::cout << "3) Check crop status\n"
-				<< "4) Harvest crop\n";
+					  << "4) Harvest crop\n";
 		}
 		int userChoice{};
 		std::cin >> userChoice;
