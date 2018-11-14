@@ -6,6 +6,15 @@
 #include "cropstuff.h"
 #include "cro.h"
 
+enum CropTypes
+{
+	CROP_WHEAT,
+	CROP_CORN,
+	CROP_POTATO,
+	CROP_CABBAGE
+};
+
+
 // This global variable can only be changed by 1 function, changeCropGrowing. 
 // Other functions needing it's status can do so with the isCropGrowing bool.
 // Apart from those 2 functions, no other functions interact with it.
@@ -80,7 +89,7 @@ void plantCrop()
 	int cropType{ cro::printPlantCrop() };
 	if (cropType == 1)
 	{
-		cro::plantCropMessage(1);
+		cro::plantCropMessage(CROP_WHEAT);
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
 		changeActionPoints(-1);
@@ -89,7 +98,7 @@ void plantCrop()
 	}
 	else if (cropType == 2)
 	{
-		cro::plantCropMessage(2);
+		cro::plantCropMessage(CROP_CORN);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -98,7 +107,7 @@ void plantCrop()
 	}
 	else if (cropType == 3)
 	{
-		cro::plantCropMessage(3);
+		cro::plantCropMessage(CROP_POTATO);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -107,7 +116,7 @@ void plantCrop()
 	}
 	else if (cropType == 4)
 	{
-		cro::plantCropMessage(4);
+		cro::plantCropMessage(CROP_CABBAGE);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
