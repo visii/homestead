@@ -70,10 +70,10 @@ namespace cro
 	{
 		std::cout << "You have chosen to plant a crop.\n"
 			<< "Select the type of crop you would like to plant\n"
-			<< "1) Crop 1\n"
-			<< "2) Crop 2\n"
-			<< "3) Crop 3\n"
-			<< "4) Crop 4\n";
+			<< "1) Wheat\n"
+			<< "2) Corn\n"
+			<< "3) Potatos\n"
+			<< "4) Cabbage\n";
 		int cropType{};
 		std::cin >> cropType;
 		return cropType;
