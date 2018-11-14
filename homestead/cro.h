@@ -21,7 +21,28 @@ namespace cro
 
 	void plantCropMessage(int cropType)
 	{
-		std::cout << "You have planted crop " << cropType << "\n";
+		
+		std::cout << "You have planted ";
+		if (cropType == 0)
+		{
+			std::cout << "wheat.\n";
+		}
+		else if (cropType == 1)
+		{
+			std::cout << "corn.\n";
+		}
+		else if (cropType == 2)
+		{
+			std::cout << "potatos.\n";
+		}
+		else if (cropType == 3)
+		{
+			std::cout << "cabbage.\n";
+		}
+		else
+		{
+			std::cout << "ERRORZ\n";
+		}
 	}
 	
 	void weedMessage()
