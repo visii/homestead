@@ -6,15 +6,6 @@
 #include "cropstuff.h"
 #include "cro.h"
 
-/*enum class CropTypes
-{
-	WHEAT,
-	CORN,
-	POTATO,
-	CABBAGE
-};*/
-
-
 // This global variable can only be changed by 1 function, changeCropGrowing. 
 // Other functions needing it's status can do so with the isCropGrowing bool.
 // Apart from those 2 functions, no other functions interact with it.
@@ -80,32 +71,6 @@ void weedField()
 	cro::weedMessage();
 	choiceHandler();
 }
-
-/*void plantCropMessage(CropTypes cropType)
-{
-	std::cout << "You have planted ";
-	if (cropType == CropTypes::WHEAT)
-	{
-		std::cout << "wheat.\n";
-	}
-	else if (cropType == CropTypes::CORN)
-	{
-		std::cout << "corn.\n";
-	}
-	else if (cropType == CropTypes::POTATO)
-	{
-		std::cout << "potatos.\n";
-	}
-	else if (cropType == CropTypes::CABBAGE)
-	{
-		std::cout << "cabbage.\n";
-	}
-	else
-	{
-		std::cout << "ERRORZ\n";
-	}
-}*/
-
 
 // Function that deal with what happens when the user plants a crop.
 // It removes the appropiate amount of money and action points for the chosen
