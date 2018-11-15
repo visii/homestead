@@ -3,8 +3,17 @@
 #define CRO_H
 
 #include <iostream>
+#include "cropstuff.h"
 // Testing namespace stuff.
 // Contains a namespace for the crop functions outputs.
+
+enum class CropTypes
+{
+	WHEAT,
+	CORN,
+	POTATO,
+	CABBAGE
+};
 
 namespace cro
 {
@@ -19,23 +28,22 @@ namespace cro
 		std::cout << "You have chosen to harvest a crop\n";
 	}
 
-	void plantCropMessage(int cropType)
+	void plantCropMessage(CropTypes cropType)
 	{
-		
 		std::cout << "You have planted ";
-		if (cropType == 0)
+		if (cropType == CropTypes::WHEAT)
 		{
 			std::cout << "wheat.\n";
 		}
-		else if (cropType == 1)
+		else if (cropType == CropTypes::CORN)
 		{
 			std::cout << "corn.\n";
 		}
-		else if (cropType == 2)
+		else if (cropType == CropTypes::POTATO)
 		{
 			std::cout << "potatos.\n";
 		}
-		else if (cropType == 3)
+		else if (cropType == CropTypes::CABBAGE)
 		{
 			std::cout << "cabbage.\n";
 		}

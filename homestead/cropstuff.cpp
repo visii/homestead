@@ -6,13 +6,13 @@
 #include "cropstuff.h"
 #include "cro.h"
 
-enum CropTypes
+/*enum class CropTypes
 {
-	CROP_WHEAT,
-	CROP_CORN,
-	CROP_POTATO,
-	CROP_CABBAGE
-};
+	WHEAT,
+	CORN,
+	POTATO,
+	CABBAGE
+};*/
 
 
 // This global variable can only be changed by 1 function, changeCropGrowing. 
@@ -81,6 +81,32 @@ void weedField()
 	choiceHandler();
 }
 
+/*void plantCropMessage(CropTypes cropType)
+{
+	std::cout << "You have planted ";
+	if (cropType == CropTypes::WHEAT)
+	{
+		std::cout << "wheat.\n";
+	}
+	else if (cropType == CropTypes::CORN)
+	{
+		std::cout << "corn.\n";
+	}
+	else if (cropType == CropTypes::POTATO)
+	{
+		std::cout << "potatos.\n";
+	}
+	else if (cropType == CropTypes::CABBAGE)
+	{
+		std::cout << "cabbage.\n";
+	}
+	else
+	{
+		std::cout << "ERRORZ\n";
+	}
+}*/
+
+
 // Function that deal with what happens when the user plants a crop.
 // It removes the appropiate amount of money and action points for the chosen
 // crop and adds the appropiate amount of XP.
@@ -89,7 +115,7 @@ void plantCrop()
 	int cropType{ cro::printPlantCrop() };
 	if (cropType == 1)
 	{
-		cro::plantCropMessage(CROP_WHEAT);
+		cro::plantCropMessage(CropTypes::WHEAT);
 		changeCropGrowing(true);
 		changePlayerMoney(-50);
 		changeActionPoints(-1);
@@ -98,7 +124,7 @@ void plantCrop()
 	}
 	else if (cropType == 2)
 	{
-		cro::plantCropMessage(CROP_CORN);
+		cro::plantCropMessage(CropTypes::CORN);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -107,7 +133,7 @@ void plantCrop()
 	}
 	else if (cropType == 3)
 	{
-		cro::plantCropMessage(CROP_POTATO);
+		cro::plantCropMessage(CropTypes::POTATO);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
@@ -116,7 +142,7 @@ void plantCrop()
 	}
 	else if (cropType == 4)
 	{
-		cro::plantCropMessage(CROP_CABBAGE);
+		cro::plantCropMessage(CropTypes::CABBAGE);
 		playerXP(1);
 		changeActionPoints(-1);
 		changePlayerMoney(-50);
